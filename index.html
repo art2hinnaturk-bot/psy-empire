@@ -35,7 +35,7 @@ const articles = [
       <p><b>1. Твои гены «помнят» голод (Эпигенетика)</b><br>В 2014-2016 годах исследовательница Рэйчел Йехуда доказала: травмы передаются по наследству. У потомков людей, переживших массовый голод, изменен ген FKBP5. Твое тело на клеточном уровне считает, что «высовываться» и иметь много ресурсов — опасно. Гены шепчут: «Будь незаметной, будь бедной — так ты выживешь». Твой мозг блокирует рост, просто чтобы спасти тебе жизнь.</p>
       <p><b>2. Сжатый мозг: Биология дефицита</b><br>Исследования Йельского университета подтвердили: хронический стресс, в котором жили твои родители, меняет структуру мозга ребенка. Зона префронтальной коры, отвечающая за масштабные решения, работает в режиме энергосбережения. Твой биологический компьютер просто не тянет программу «Миллионер».</p>
       <p><b>3. Лояльность маме: Налог на успех</b><br>Если твоя мать всю жизнь экономила на себе, твое бессознательное воспринимает твой успех как оскорбление её памяти. Ты выбираешь оставаться «своей» — бедной, но принятой семьей. Ты платишь этот невидимый «налог на травму».</p>
-      <p><b>Как взломать этот код?</b><br>В бизнесе, если система приносит убытки, её реструктурируют. Нельзя построить современный технологичный рехаб (о котором я мечтаю и который строю) на старом программном обеспечении «выживальщика». Твои предки выживали, чтобы ты жила. Хватит предавать их жертву, оставаясь маленькой и испуганной. Пора забрать свое по праву рождения.</p>
+      <p><b>Как взломать этот код?</b><br>В бизнесе, если система приносит убытки, её реструктурируют. Нельзя построить современный технологичный рехаб на старом программном обеспечении «выживальщика». Твои предки выживали, чтобы ты жила. Хватит предавать их жертву, оставаясь маленькой и испуганной. Пора забрать свое по праву рождения.</p>
     ` 
   }
 ];
@@ -79,56 +79,4 @@ const sessions = [
         .hero h1 { font-size: 3.5rem; line-height: 1.1; margin: 20px 0; }
 
         details { border-bottom: 1px solid var(--gray); cursor: pointer; padding: 25px 0; }
-        summary { font-size: 1.1rem; list-style: none; display: flex; justify-content: space-between; align-items: center; text-transform: uppercase; letter-spacing: 1px; }
-        summary::after { content: '↓'; color: #444; transition: 0.3s; }
-        details[open] summary::after { transform: rotate(180deg); color: #fff; }
-        .details-content { padding: 25px 0; color: #999; font-size: 1.05rem; max-width: 850px; }
-        .details-content b { color: #fff; }
-        
-        @media (max-width: 768px) { .hero { flex-direction: column; text-align: center; } .hero-img { width: 100%; height: 400px; } .hero h1 { font-size: 2.5rem; } }
-    </style>
-</head>
-<body>
-
-    <section class="hero container">
-        <img src="/hero-photo.jpg" alt="Лана" class="hero-img">
-        <div>
-            <p style="color: #666; font-size: 0.7rem; text-transform: uppercase; letter-spacing: 4px;">Лана // Проводник</p>
-            <h1>Работать, не работая.</h1>
-            <a href={formLink} class="btn" target="_blank" style="background:#fff; color:#000;">Запустить трансформацию</a>
-        </div>
-    </section>
-
-    <section class="section container">
-        <h2>Библиотека Мысли</h2>
-        {articles.map((a) => (
-            <details>
-                <summary>{a.title}</summary>
-                <div class="details-content">
-                    <div set:html={a.content}></div>
-                    <a href={waLink} class="btn" style="font-size: 0.7rem;">Записаться на диагностику</a>
-                </div>
-            </details>
-        ))}
-    </section>
-
-    <section class="section container">
-        <h2>Программа 13 сессий</h2>
-        {sessions.map((s) => (
-            <details>
-                <summary>{s.title}</summary>
-                <div class="details-content">
-                    <p>{s.content}</p>
-                    <p><b>Цена: {s.price}</b></p>
-                    <a href={formLink} class="btn" style="font-size: 0.7rem;">Забронировать</a>
-                </div>
-            </details>
-        ))}
-    </section>
-
-    <footer class="container" style="padding: 40px 0; color: #333; font-size: 0.8rem; text-align: center;">
-        &copy; 2026 Лана. Истина выше согласия.
-    </footer>
-
-</body>
-</html>
+        summary { font-size: 1.1rem; list-style: none; display: flex; justify-content
