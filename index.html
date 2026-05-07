@@ -9,34 +9,271 @@
         body { margin: 0; font-family: 'Helvetica Neue', Arial, sans-serif; background-color: var(--bg); color: var(--text); line-height: 1.6; }
         .container { max-width: 1000px; margin: 0 auto; padding: 0 20px; }
         .section { padding: 80px 0; border-bottom: 1px solid #111; }
-        h1, h2 { text-transform: uppercase; letter-spacing: 2px; font-weight: 300; }
+        h1, h2, h3 { text-transform: uppercase; letter-spacing: 2px; font-weight: 300; }
         
         .btn { display: inline-block; padding: 15px 30px; border: 1px solid var(--accent); color: var(--accent); text-transform: uppercase; letter-spacing: 1.5px; font-size: 0.8rem; text-decoration: none; transition: 0.3s; cursor: pointer; text-align: center; margin-top: 15px; }
         .btn:hover { background: var(--accent); color: var(--bg); }
+        .btn-main { background: #fff; color: #000; border: none; }
+        .btn-main:hover { background: #ccc; }
 
         .hero { display: flex; align-items: center; min-height: 85vh; gap: 50px; }
-        .hero-img { width: 45%; height: 550px; object-fit: cover; filter: grayscale(100%) contrast(1.1); }
+        .hero-img { width: 45%; height: 600px; object-fit: cover; filter: grayscale(100%) contrast(1.1); }
         .hero h1 { font-size: 3.5rem; line-height: 1.1; margin: 20px 0; }
+
+        .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; margin-top: 40px; }
+        .feature-item { margin-bottom: 20px; }
+        .feature-item span { color: #fff; display: block; font-weight: bold; margin-bottom: 5px; }
 
         details { border-bottom: 1px solid var(--gray); cursor: pointer; padding: 25px 0; }
         summary { font-size: 1.1rem; list-style: none; display: flex; justify-content: space-between; align-items: center; text-transform: uppercase; letter-spacing: 1px; }
-        summary::after { content: '↓'; color: #444; transition: 0.3s; }
+        summary::after { content: '↓'; color: #444; transition: 0.3s; font-size: 1.2rem; }
         details[open] summary::after { transform: rotate(180deg); color: #fff; }
         .details-content { padding: 25px 0; color: #999; font-size: 1.05rem; max-width: 850px; }
+        .details-content p { margin-bottom: 15px; }
         .details-content b { color: #fff; }
+        .price-tag { display: inline-block; background: #1a1a1a; padding: 5px 15px; margin: 10px 10px 10px 0; border-radius: 3px; font-size: 0.9rem; color: #fff; }
         
-        @media (max-width: 768px) { .hero { flex-direction: column; text-align: center; } .hero-img { width: 100%; height: 400px; } .hero h1 { font-size: 2.5rem; } }
+        @media (max-width: 768px) { 
+            .hero { flex-direction: column; text-align: center; margin-top: 40px;} 
+            .hero-img { width: 100%; height: 450px; } 
+            .hero h1 { font-size: 2.5rem; } 
+            .about-grid { grid-template-columns: 1fr; }
+        }
     </style>
 </head>
 <body>
 
     <section class="hero container">
-        <img src="/hero-photo.jpg" alt="Лана" class="hero-img">
+        <img src="lana.jpg" alt="Лана" class="hero-img">
         <div>
             <p style="color: #666; font-size: 0.7rem; text-transform: uppercase; letter-spacing: 4px;">Лана // Проводник</p>
-            <h1>Работать, не работая.</h1>
-            <a href="https://docs.google.com/forms/d/e/1FAIpQLSeqxlsngQO7RLIvUvvioL8JQ2svBZjeFinz49A8cbRSCTj99w/viewform" class="btn" target="_blank" style="background:#fff; color:#000;">Запустить трансформацию</a>
+            <h1>Работать,<br>не работая.</h1>
+            <p style="color: #aaa; margin-bottom: 30px; font-size: 1.1rem;">Трансформации, на которые раньше уходили годы, происходят за считанные минуты.</p>
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSeqxlsngQO7RLIvUvvioL8JQ2svBZjeFinz49A8cbRSCTj99w/viewform?usp=send_form" class="btn btn-main" target="_blank">Записаться на консультацию</a>
         </div>
+    </section>
+
+    <section class="section container">
+        <h2>Кто ваш проводник?</h2>
+        <p style="font-size: 1.2rem; color: #ccc; max-width: 800px; margin-bottom: 40px;">«Моя главная цель — не подсадить вас на терапию. После работы со мной люди учатся жить без психолога и становятся авторами своей реальности».</p>
+        
+        <div class="about-grid">
+            <div>
+                <div class="feature-item"><span>✦ 10 лет фундаментальной практики</span>помощи людям в кризисных и тупиковых ситуациях.</div>
+                <div class="feature-item"><span>✦ 4 года интегративных методов</span>квантовая психология, работа с полем, бессознательным и родовыми сценариями.</div>
+                <div class="feature-item"><span>✦ Твердая база</span>высшее психолого-педагогическое образование и международная сертификация в коучинге.</div>
+                <div class="feature-item"><span>✦ Уникальный синтез</span>соединяю структурный коучинг для достижения целей с глубокой алхимией психики для мгновенных прорывов.</div>
+            </div>
+            
+            <div style="background: #0a0a0a; border: 1px solid #1a1a1a; display: flex; flex-direction: column;">
+                <img src="lana-shadow.jpg" alt="Тень" style="width: 100%; height: 300px; object-fit: cover; filter: grayscale(100%) contrast(1.1);">
+                <div style="padding: 30px;">
+                    <h3 style="font-size: 1rem; margin-top: 0;">Архитектура метода</h3>
+                    <p style="color: #888; font-size: 0.95rem;">Мой метод — это отражение моего стиля. Никакой шелухи, избыточности и пустых разговоров. Жесткая структура и кристальная ясность для стремительных действий.</p>
+                    <p style="color: #888; font-size: 0.95rem;"><b>Инструменты:</b><br>- Квантовая психология.<br>- Твердые измеримые результаты.<br>- Глубинное психотипирование.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section container">
+        <h2>Программа трансформации</h2>
+        <p style="color: #666; margin-bottom: 30px;">Система 12 сфер + Интеграция.<br>Длительность сессии: от 1 до 2 часов (мы работаем не «по таймеру», а до результата).</p>
+        
+        <details>
+            <summary>Сессия 1. Истинный запрос и распаковка силы</summary>
+            <div class="details-content">
+                <p>Я не работаю «по таймеру» и не отпускаю вас без результата. В первый день мы закладываем фундамент вашей трансформации. Мы снимаем социальные маски и разрушаем иллюзии о том, чего вы якобы «должны» хотеть, чтобы найти то, что вам действительно нужно.</p>
+                <p><b>Ваши результаты:</b><br>
+                - Кристальная ясность желаний: Вы сформируете свою «идеальную точку».<br>
+                - Авторство своей стратегии: Составите для себя точные рекомендации из состояния кристальной внутренней правды.<br>
+                - Освобождение от ложных целей.<br>
+                - Доступ к скрытому ресурсу: Превратим подавленную агрессию в мощное топливо для действий.<br>
+                - Фундаментальное спокойствие и твердая опора.</p>
+                <div class="price-tag">Разовая: 7 000 ₽</div> <div class="price-tag" style="background:#333;">В пакете: 5 000 ₽</div><br>
+                <a href="https://docs.google.com/forms/d/e/1FAIpQLSeqxlsngQO7RLIvUvvioL8JQ2svBZjeFinz49A8cbRSCTj99w/viewform?usp=send_form" class="btn" target="_blank">Забронировать</a>
+            </div>
+        </details>
+
+        <details>
+            <summary>Сессия 2. Линия времени и выбор сценария</summary>
+            <div class="details-content">
+                <p>Мы помещаем вас в точку выбора через 10 лет и сталкиваем лицом к лицу с двумя сценариями: успех или провал. Через эту проекцию мы находим ту самую «поломку» в прошлом, которая тянет вас назад, и переписываем её.</p>
+                <p><b>Ваши результаты:</b><br>
+                - Нейтрализация страха провала.<br>
+                - Глубинное исцеление первопричины ранней детской травмы.<br>
+                - Получение «ресурса из поля».<br>
+                - Синхронизация с линией времени и прямой маршрут к целям.<br>
+                - Квантовый скачок к успеху.</p>
+                <div class="price-tag">Разовая: 7 000 ₽</div> <div class="price-tag" style="background:#333;">В пакете: 5 000 ₽</div><br>
+                <a href="https://docs.google.com/forms/d/e/1FAIpQLSeqxlsngQO7RLIvUvvioL8JQ2svBZjeFinz49A8cbRSCTj99w/viewform?usp=send_form" class="btn" target="_blank">Забронировать</a>
+            </div>
+        </details>
+
+        <details>
+            <summary>Сессия 3. Финансовая емкость и масштаб</summary>
+            <div class="details-content">
+                <p>Мы берем за ориентир вашу идеальную финансовую реальность и используем это как лакмусовую бумажку. Мы идем в первопричину: исцеляем травму, из-за которой деньги связаны с тяжестью, и демонтируем программы нехватки.</p>
+                <p><b>Ваши результаты:</b><br>
+                - Разрушение сценария бедности и деструктивных паттернов.<br>
+                - Исцеление «тревоги заработка» (связь денег с опасностью).<br>
+                - Снятие финансовых блоков и расширение пропускной способности.<br>
+                - Тотальное расширение емкости для гигантских сумм.<br>
+                - Состояние финансовой неуязвимости.</p>
+                <div class="price-tag">Разовая: 7 000 ₽</div> <div class="price-tag" style="background:#333;">В пакете: 5 000 ₽</div><br>
+                <a href="https://docs.google.com/forms/d/e/1FAIpQLSeqxlsngQO7RLIvUvvioL8JQ2svBZjeFinz49A8cbRSCTj99w/viewform?usp=send_form" class="btn" target="_blank">Забронировать</a>
+            </div>
+        </details>
+
+        <details>
+            <summary>Сессия 4. Проявленность и Внутренний Критик</summary>
+            <div class="details-content">
+                <p>Мы ставим в поле две фигуры: вас и жесткого Критика. Идем в первопричину — точку в детстве, где вас осекли. Используя квантовую физику, мы растождествляем вас с фигурой Критика. Вы вернете себе право быть видимым.</p>
+                <p><b>Ваши результаты:</b><br>
+                - Уничтожение внутреннего критика и исцеление травмы сравнения.<br>
+                - Тотальная безопасность в публичности (снятие синдрома хорошей девочки).<br>
+                - Активация «Чистого голоса» — ваши слова приобретут вес.<br>
+                - Разрушение страха «быть самозванцем».<br>
+                - Легкость в построении премиальных связей и неязвимость к хейту.</p>
+                <div class="price-tag">Разовая: 7 000 ₽</div> <div class="price-tag" style="background:#333;">В пакете: 5 000 ₽</div><br>
+                <a href="https://docs.google.com/forms/d/e/1FAIpQLSeqxlsngQO7RLIvUvvioL8JQ2svBZjeFinz49A8cbRSCTj99w/viewform?usp=send_form" class="btn" target="_blank">Забронировать</a>
+            </div>
+        </details>
+
+        <details>
+            <summary>Сессия 5. Архитектура внутренней опоры</summary>
+            <div class="details-content">
+                <p>Зачастую достижению цели мешает внутренний хаос. Чтобы прекратить войну субличностей, мы идем в корневую травму — момент зачатия. Мы напитываем вас чистым ресурсом от абсолютных фигур Матери и Отца.</p>
+                <p><b>Ваши результаты:</b><br>
+                - Выход из матрицы выживания и «треугольника Карпмана».<br>
+                - Исцеление базовой уязвимости и фоновой тревоги.<br>
+                - Обретение эталонной поддержки и чувства безопасности.<br>
+                - Сборка целостной личности (Творец, Опора, Стратег).<br>
+                - Разблокировка вашего самого «горящего» запроса.</p>
+                <div class="price-tag">Разовая: 7 000 ₽</div> <div class="price-tag" style="background:#333;">В пакете: 5 000 ₽</div><br>
+                <a href="https://docs.google.com/forms/d/e/1FAIpQLSeqxlsngQO7RLIvUvvioL8JQ2svBZjeFinz49A8cbRSCTj99w/viewform?usp=send_form" class="btn" target="_blank">Забронировать</a>
+            </div>
+        </details>
+
+        <details>
+            <summary>Сессия 6. Энергия Творца</summary>
+            <div class="details-content">
+                <p>Мы выстраиваем путь к масштабной цели через диагностику отношений с мамой (ценность) и папой (проявленность). Мы находим точку сбоя, прорабатываем травму за минуты и наполняем линию жизни ресурсом.</p>
+                <p><b>Ваши результаты:</b><br>
+                - Обретение безусловной самоценности (Проработка 1 шага).<br>
+                - Масштабная проявленность в социуме (Проработка 2 шага).<br>
+                - Возвращение «состояния Творца» и детского драйва.<br>
+                - Уничтожение «невидимого потолка».<br>
+                - Твердый энергетический шаг к реализации прямо на сессии.</p>
+                <div class="price-tag">Разовая: 7 000 ₽</div> <div class="price-tag" style="background:#333;">В пакете: 5 000 ₽</div><br>
+                <a href="https://docs.google.com/forms/d/e/1FAIpQLSeqxlsngQO7RLIvUvvioL8JQ2svBZjeFinz49A8cbRSCTj99w/viewform?usp=send_form" class="btn" target="_blank">Забронировать</a>
+            </div>
+        </details>
+
+        <details>
+            <summary>Сессия 7. Психосоматика и исцеление рода</summary>
+            <div class="details-content">
+                <p>Тело часто создает симптом, чтобы защитить нас. Мы спускаемся в родовую систему, находим предка, с которого началась поломка, разрываем родовые контракты и интегрируем здоровую энергию здесь и сейчас.</p>
+                <p><b>Ваши результаты:</b><br>
+                - Уничтожение скрытых выгод болезни или симптома.<br>
+                - Освобождение от родовых обетов и кармических договоров.<br>
+                - Восстановление энергетической целостности тела.<br>
+                - Квантовая перезагрузка на клеточном уровне.<br>
+                - Твердые изменения физического состояния в реальности.</p>
+                <div class="price-tag">Разовая: 7 000 ₽</div> <div class="price-tag" style="background:#333;">В пакете: 5 000 ₽</div><br>
+                <a href="https://docs.google.com/forms/d/e/1FAIpQLSeqxlsngQO7RLIvUvvioL8JQ2svBZjeFinz49A8cbRSCTj99w/viewform?usp=send_form" class="btn" target="_blank">Забронировать</a>
+            </div>
+        </details>
+
+        <details>
+            <summary>Сессия 8. Алхимия партнерства и магнетизм</summary>
+            <div class="details-content">
+                <p>Мы ставим в поле партнера и «идеальную женщину/мужчину» (вашу вытесненную Тень). Мы раздуваем ресурс этой Тени до максимума и присваиваем его вам, мгновенно меняя динамику отношений.</p>
+                <p><b>Ваши результаты:</b><br>
+                - Фундаментальная профилактика измен и треугольников.<br>
+                - Освобождение от деструктивных родовых сценариев любви.<br>
+                - Тотальный магнетизм и присвоение сексуальности.<br>
+                - Исцеление корневой травмы отвержения.<br>
+                - Абсолютная самоценность без конкуренции.</p>
+                <div class="price-tag">Разовая: 7 000 ₽</div> <div class="price-tag" style="background:#333;">В пакете: 5 000 ₽</div><br>
+                <a href="https://docs.google.com/forms/d/e/1FAIpQLSeqxlsngQO7RLIvUvvioL8JQ2svBZjeFinz49A8cbRSCTj99w/viewform?usp=send_form" class="btn" target="_blank">Забронировать</a>
+            </div>
+        </details>
+
+        <details>
+            <summary>Сессия 9. Теневые Архетипы и демонтаж «Неудачника»</summary>
+            <div class="details-content">
+                <p>Мы находим теневую противоположность вашего идеала — архетип «Неудачника». Мы намеренно сталкиваемся с разрушающей субличностью («ведьмой») и нейтрализуем ее власть, освобождая ваш ресурс.</p>
+                <p><b>Ваши результаты:</b><br>
+                - Разрушение бессознательного маршрута к провалу.<br>
+                - Освобождение от иллюзии «ничтожности» и самозванца.<br>
+                - Уничтожение хронического «Комплекса» (навязчивой проблемы).<br>
+                - Укрощение внутренних демонов и возврат энергии.<br>
+                - Абсолютное право на масштаб и успех.</p>
+                <div class="price-tag">Разовая: 7 000 ₽</div> <div class="price-tag" style="background:#333;">В пакете: 5 000 ₽</div><br>
+                <a href="https://docs.google.com/forms/d/e/1FAIpQLSeqxlsngQO7RLIvUvvioL8JQ2svBZjeFinz49A8cbRSCTj99w/viewform?usp=send_form" class="btn" target="_blank">Забронировать</a>
+            </div>
+        </details>
+
+        <details>
+            <summary>Сессия 10. Архитектура психики и инициация в Мастера</summary>
+            <div class="details-content">
+                <p>Переход на уровень Наставничества. Мы разбираем этажи вашей психики и прорабатываем фигуру Отца (способность достигать целей в социуме). Вы получаете уникальный алгоритм квантовой самопомощи.</p>
+                <p><b>Ваши результаты:</b><br>
+                - Декодирование собственной психики и точек травматики.<br>
+                - Разблокировка энергии Достигатора (интеграция Отца).<br>
+                - Овладение технологией квантовой самопомощи.<br>
+                - Выход из позиции «вечного ученика».<br>
+                - Интеграция позиции Мастера и самостоятельная корректировка реальности.</p>
+                <div class="price-tag">Разовая: 7 000 ₽</div> <div class="price-tag" style="background:#333;">В пакете: 5 000 ₽</div><br>
+                <a href="https://docs.google.com/forms/d/e/1FAIpQLSeqxlsngQO7RLIvUvvioL8JQ2svBZjeFinz49A8cbRSCTj99w/viewform?usp=send_form" class="btn" target="_blank">Забронировать</a>
+            </div>
+        </details>
+
+        <details>
+            <summary>Сессия 11. Предназначение и стратегия</summary>
+            <div class="details-content">
+                <p>Мы тестируем 3 варианта вашей реализации прямо в Поле. Идем в ваш самый большой страх (точку неудачи), чтобы забрать оттуда потенциал, и выстраиваем пошаговую стратегию достижения главной цели.</p>
+                <p><b>Ваши результаты:</b><br>
+                - Кристальная ясность истинного предназначения.<br>
+                - Трансформация страха провала в плюс энергии.<br>
+                - Обретение внутренней тишины через точку «Пустоты».<br>
+                - Синхронизация жизненной энергии и цели.<br>
+                - Твердая стратегия коучинговых действий.</p>
+                <div class="price-tag">Разовая: 7 000 ₽</div> <div class="price-tag" style="background:#333;">В пакете: 5 000 ₽</div><br>
+                <a href="https://docs.google.com/forms/d/e/1FAIpQLSeqxlsngQO7RLIvUvvioL8JQ2svBZjeFinz49A8cbRSCTj99w/viewform?usp=send_form" class="btn" target="_blank">Забронировать</a>
+            </div>
+        </details>
+
+        <details>
+            <summary>Сессия 12. Квантовое масштабирование и управление толпой</summary>
+            <div class="details-content">
+                <p>Мы идем в самую страшную фантазию — публичный провал, чтобы психика перестала саботировать успех. Исцеляем травму первой проявленности и превращаем агрессивную толпу в преданных поклонников.</p>
+                <p><b>Ваши результаты:</b><br>
+                - Абсолютная неуязвимость к критике и публичному позору.<br>
+                - Отключение программы саморазрушения перед масштабом.<br>
+                - Трансформация врагов в фанатов на энергетическом уровне.<br>
+                - Мастерство выдерживать масштаб и внимание масс.<br>
+                - Построение стратегической ресурсной базы нетворкинга.</p>
+                <div class="price-tag">Разовая: 7 000 ₽</div> <div class="price-tag" style="background:#333;">В пакете: 5 000 ₽</div><br>
+                <a href="https://docs.google.com/forms/d/e/1FAIpQLSeqxlsngQO7RLIvUvvioL8JQ2svBZjeFinz49A8cbRSCTj99w/viewform?usp=send_form" class="btn" target="_blank">Забронировать</a>
+            </div>
+        </details>
+
+        <details>
+            <summary>Сессия 13. Инициация в успех и реальность</summary>
+            <div class="details-content">
+                <p>Финальная сборка личности. Оцифровка пути от «Точки А». Мы вычищаем остаточный саботаж (привычку откладывать триумф) и снимаем корону «идеальности», делая вас неуязвимым в реальной жизни.</p>
+                <p><b>Ваши результаты:</b><br>
+                - Тотальное присвоение своего успеха и масштаба.<br>
+                - Уничтожение привычки «откладывать жизнь» на потом.<br>
+                - Квантовая инициация в новый статус успешного человека.<br>
+                - Прививка от перфекционизма и иллюзии «идеальной жизни».<br>
+                - Твердая автономность и статус абсолютного Автора.</p>
+                <div class="price-tag">Разовая: 7 000 ₽</div> <div class="price-tag" style="background:#333;">В пакете: 5 000 ₽</div><br>
+                <a href="https://docs.google.com/forms/d/e/1FAIpQLSeqxlsngQO7RLIvUvvioL8JQ2svBZjeFinz49A8cbRSCTj99w/viewform?usp=send_form" class="btn" target="_blank">Забронировать</a>
+            </div>
+        </details>
     </section>
 
     <section class="section container">
@@ -48,59 +285,41 @@
                 <p>Вы когда-нибудь задумывались, почему, обладая знаниями, амбициями и ресурсами, вы раз за разом саботируете собственный успех?</p>
                 <p>Вы ставите грандиозные цели, но в решающий момент проваливаетесь в прокрастинацию. Вы хотите здоровой, любящей семьи, но вас магнитом тянет к холодным, эмоционально недоступным партнерам. Вы достигаете определенной планки в доходах, и внезапно ваше тело говорит «стоп», погружая вас в апатию, болезни или состояние полного выгорания.</p>
                 <p>Вам кажется, что вы просто «недостаточно стараетесь». Но как клинический психолог, я могу сказать прямо: ваши проблемы с деньгами и отношениями — это не про лень и не про плохой тайм-менеджмент. Это блестяще работающие защитные механизмы вашей психики.</p>
-                <p><b>Симптом 1: Броня «Хищницы» и выбор холодных партнеров</b><br>Многие женщины живут в колоссальном расщеплении. С одной стороны — успешная, непробиваемая броня. С другой — испуганная девочка, которая панически боится, что ее бросят.</p>
-                <p>Елена (имя изменено) в 6 лет стала родителем для мамы и пережила предательство отца. Во взрослой жизни она бессознательно выбирала холодных мужчин, пытаясь «растопить» их, чтобы доказать свою ценность. Если вы раз за разом пытаетесь заслужить любовь тех, кто не способен ее дать — вы отыгрываете травму.</p>
+                <p><b>Симптом 1: Броня «Хищницы» и выбор холодных партнеров</b><br>Многие женщины живут в колоссальном расщеплении. С одной стороны — успешная, непробиваемая броня. С другой — испуганная девочка, которая панически боится, что ее бросят. Елена в 6 лет стала родителем для мамы и пережила предательство отца. Во взрослой жизни она бессознательно выбирала холодных мужчин, пытаясь «растопить» их, чтобы доказать свою ценность. Если вы раз за разом пытаетесь заслужить любовь тех, кто не способен ее дать — вы отыгрываете травму.</p>
                 <p><b>Симптом 2: Телесная диссоциация и ловушка Спасателя</b><br>Когда вы вырастаете в деньгах, тело может начать вас предавать. Мария росла в доходах, но ее тело впадало в состояние «амебы», отключая энергию. Мечта о «волшебном спонсоре» — это опасный регресс в детскую позицию. Внешняя опора иллюзорна. Только взрослая, спокойная стабильность способна экологично удержать большие деньги.</p>
-                <a href="https://wa.me/5521997903431?text=Светлана,%20я%20хочу%20на%20консультацию" class="btn" style="font-size: 0.7rem;">Записаться на диагностику</a>
+                <a href="https://wa.me/5521997903431?text=Лана,%20я%20хочу%20на%20консультацию" class="btn" style="font-size: 0.7rem;">Связь с Проводником</a>
             </div>
         </details>
 
         <details>
-            <summary>Секс, ярость и пустые счета: как ваша «удобность» сжирает ваши деньги</summary>
+            <summary>Секс, ярость и пустые счета: как «удобность» сжирает деньги</summary>
             <div class="details-content">
-                <p>Давайте без долгих прелюдий. Вы смотрите на свой доход, потом смотрите на количество усилий, которые вкладываете в бизнес, и чувствуете, как внутри поднимается глухая, тяжелая тошнота.</p>
-                <p>Ваш банковский счет упорно не соответствует вашему интеллекту и вашей усталости. Проблема не в воронках продаж. Проблема в том, что вы элегантно, профессионально и безжалостно <b>кастрируете собственную жизненную силу</b>.</p>
+                <p>Давайте без долгих прелюдий. Вы смотрите на свой доход, потом смотрите на количество усилий, которые вкладываете в бизнес, и чувствуете, как внутри поднимается глухая, тяжелая тошнота. Ваш банковский счет упорно не соответствует вашему интеллекту и вашей усталости.</p>
+                <p>Проблема не в воронках продаж. Проблема в том, что вы элегантно, профессионально и безжалостно <b>кастрируете собственную жизненную силу</b>.</p>
                 <p>Масштабные проекты, дерзкие чеки и влияние — это акт агрессивной экспансии. Это животная способность сказать реальности: «Я здесь. И я заберу свое». Но в детстве вас научили быть «хорошими». Вашу злость назвали неудобной, а вашу сексуальность — грязной. Вы сжали челюсти, заблокировали диафрагму и заморозили свой таз. Вы упаковали хищника в корсет из вежливости.</p>
                 <p><b>Нейронное самоубийство</b><br>Исследования фМРТ кричат об одном: подавление Тени сжирает колоссальный ресурс префронтальной коры мозга. Вы тратите 90% энергии на то, чтобы удерживать мышечный панцирь и улыбаться, когда хочется рычать. На строительство империи остаются жалкие 10%.</p>
-                <p>Агрессия — это клыки, необходимые для захвата территорий. Сексуальность — это магнетический контакт с материей. Замороженный таз не способен генерировать и удерживать большие ресурсы. Большие деньги приходят только на расслабленную, хищную витальность.</p>
-                <p>Чтобы совершить реальный скачок, вам придется вернуть себе право быть живым, дышащим и пугающе неудобным.</p>
-                <a href="https://wa.me/5521997903431?text=Светлана,%20я%20хочу%20на%20консультацию" class="btn" style="font-size: 0.7rem;">Записаться на диагностику</a>
+                <p>Агрессия — это клыки, необходимые для захвата территорий. Сексуальность — это магнетический контакт с материей. Замороженный таз не способен генерировать и удерживать большие ресурсы. Большие деньги приходят только на расслабленную, хищную витальность. Чтобы совершить реальный скачок, вам придется вернуть себе право быть живым, дышащим и пугающе неудобным.</p>
+                <a href="https://wa.me/5521997903431?text=Лана,%20я%20хочу%20на%20консультацию" class="btn" style="font-size: 0.7rem;">Связь с Проводником</a>
             </div>
         </details>
 
         <details>
-            <summary>Генетический код бедности: Почему твой мозг боится денег больше, чем нищеты?</summary>
+            <summary>Генетический код бедности: Почему мозг боится денег?</summary>
             <div class="details-content">
                 <p>Ты можешь обложиться курсами по инвестициям, выстроить идеальную автоворонку и медитировать на чеки с шестью нулями, но если твоя бабушка в свое время прятала сухари под матрасом, а мать всю жизнь «несла свой крест», твое тело будет саботировать любой миллионный контракт.</p>
                 <p>Почему? Потому что в твоем подсознании прописан жесткий контракт: «Быть богатой — значит предать свой род». Давай снимем мистический налет и посмотрим на это глазами науки. Сейчас, обучаясь в Бразилии на бизнес-администрировании, я вижу, как личная экономика человека напрямую зависит от его биологии.</p>
-                <p><b>1. Твои гены «помнят» голод (Эпигенетика)</b><br>В 2014-2016 годах исследовательница Рэйчел Йехуда доказала: травмы передаются по наследству. У потомков людей, переживших массовый голод, изменен ген FKBP5. Твое тело на клеточном уровне считает, что «высовываться» и иметь много ресурсов — опасно. Гены шепчут: «Будь незаметной, будь бедной — так ты выживешь». Твой мозг блокирует рост, просто чтобы спасти тебе жизнь.</p>
-                <p><b>2. Сжатый мозг: Биология дефицита</b><br>Исследования Йельского университета подтвердили: хронический стресс, в котором жили твои родители, меняет структуру мозга ребенка. Зона префронтальной коры, отвечающая за масштабные решения, работает в режиме энергосбережения. Твой биологический компьютер просто не тянет программу «Миллионер».</p>
-                <p><b>3. Лояльность маме: Налог на успех</b><br>Если твоя мать всю жизнь экономила на себе, твое бессознательное воспринимает твой успех как оскорбление её памяти. Ты выбираешь оставаться «своей» — бедной, но принятой семьей. Ты платишь этот невидимый «налог на травму».</p>
-                <p><b>Как взломать этот код?</b><br>В бизнесе, если система приносит убытки, её реструктурируют. Нельзя построить современный технологичный рехаб на старом программном обеспечении «выживальщика». Твои предки выживали, чтобы ты жила. Хватит предавать их жертву, оставаясь маленькой и испуганной. Пора забрать свое по праву рождения.</p>
-                <a href="https://wa.me/5521997903431?text=Светлана,%20я%20хочу%20на%20консультацию" class="btn" style="font-size: 0.7rem;">Записаться на диагностику</a>
+                <p><b>1. Твои гены «помнят» голод</b><br>В 2014-2016 годах доказали: травмы передаются по наследству. У потомков людей, переживших массовый голод, изменен ген FKBP5. Твое тело на клеточном уровне считает, что «высовываться» и иметь много ресурсов — опасно. Гены шепчут: «Будь незаметной, будь бедной — так ты выживешь».</p>
+                <p><b>2. Сжатый мозг: Биология дефицита</b><br>Исследования подтвердили: хронический стресс, в котором жили твои родители, меняет структуру мозга ребенка. Зона префронтальной коры работает в режиме энергосбережения. Твой биологический компьютер просто не тянет программу «Миллионер».</p>
+                <p><b>3. Лояльность маме: Налог на успех</b><br>Если твоя мать всю жизнь экономила на себе, твое бессознательное воспринимает успех как оскорбление её памяти. Ты выбираешь оставаться «своей» — бедной, но принятой семьей.</p>
+                <p><b>Как взломать этот код?</b><br>В бизнесе, если система приносит убытки, её реструктурируют. Нельзя построить современный технологичный рехаб на старом программном обеспечении «выживальщика». Твои предки выживали, чтобы ты жила. Хватит предавать их жертву. Пора забрать свое по праву рождения.</p>
+                <a href="https://wa.me/5521997903431?text=Лана,%20я%20хочу%20на%20консультацию" class="btn" style="font-size: 0.7rem;">Связь с Проводником</a>
             </div>
         </details>
     </section>
 
-    <section class="section container">
-        <h2>Программа 13 сессий</h2>
-        <details><summary>Сессия 1: Истинный запрос</summary><div class="details-content"><p>Разрушение иллюзий и распаковка силы.</p><p><b>Цена: 7 000 ₽</b></p><a href="https://docs.google.com/forms/d/e/1FAIpQLSeqxlsngQO7RLIvUvvioL8JQ2svBZjeFinz49A8cbRSCTj99w/viewform" class="btn" style="font-size: 0.7rem;">Забронировать</a></div></details>
-        <details><summary>Сессия 2: Линия времени</summary><div class="details-content"><p>Исцеление прошлого ради будущего.</p><p><b>Цена: 7 000 ₽</b></p><a href="https://docs.google.com/forms/d/e/1FAIpQLSeqxlsngQO7RLIvUvvioL8JQ2svBZjeFinz49A8cbRSCTj99w/viewform" class="btn" style="font-size: 0.7rem;">Забронировать</a></div></details>
-        <details><summary>Сессия 3: Финансовая емкость</summary><div class="details-content"><p>Расширение возможностей дохода.</p><p><b>Цена: 7 000 ₽</b></p><a href="https://docs.google.com/forms/d/e/1FAIpQLSeqxlsngQO7RLIvUvvioL8JQ2svBZjeFinz49A8cbRSCTj99w/viewform" class="btn" style="font-size: 0.7rem;">Забронировать</a></div></details>
-        <details><summary>Сессия 4: Внутренний Критик</summary><div class="details-content"><p>Уничтожение судьи внутри себя.</p><p><b>Цена: 7 000 ₽</b></p><a href="https://docs.google.com/forms/d/e/1FAIpQLSeqxlsngQO7RLIvUvvioL8JQ2svBZjeFinz49A8cbRSCTj99w/viewform" class="btn" style="font-size: 0.7rem;">Забронировать</a></div></details>
-        <details><summary>Сессия 5: Внутренняя опора</summary><div class="details-content"><p>Сборка фундамента личности.</p><p><b>Цена: 7 000 ₽</b></p><a href="https://docs.google.com/forms/d/e/1FAIpQLSeqxlsngQO7RLIvUvvioL8JQ2svBZjeFinz49A8cbRSCTj99w/viewform" class="btn" style="font-size: 0.7rem;">Забронировать</a></div></details>
-        <details><summary>Сессия 6: Энергия Творца</summary><div class="details-content"><p>Разблокировка масштаба.</p><p><b>Цена: 7 000 ₽</b></p><a href="https://docs.google.com/forms/d/e/1FAIpQLSeqxlsngQO7RLIvUvvioL8JQ2svBZjeFinz49A8cbRSCTj99w/viewform" class="btn" style="font-size: 0.7rem;">Забронировать</a></div></details>
-        <details><summary>Сессия 7: Психосоматика</summary><div class="details-content"><p>Разрыв родовых контрактов.</p><p><b>Цена: 7 000 ₽</b></p><a href="https://docs.google.com/forms/d/e/1FAIpQLSeqxlsngQO7RLIvUvvioL8JQ2svBZjeFinz49A8cbRSCTj99w/viewform" class="btn" style="font-size: 0.7rem;">Забронировать</a></div></details>
-        <details><summary>Сессия 8: Алхимия партнерства</summary><div class="details-content"><p>Интеграция Тени и магнетизм.</p><p><b>Цена: 7 000 ₽</b></p><a href="https://docs.google.com/forms/d/e/1FAIpQLSeqxlsngQO7RLIvUvvioL8JQ2svBZjeFinz49A8cbRSCTj99w/viewform" class="btn" style="font-size: 0.7rem;">Забронировать</a></div></details>
-        <details><summary>Сессия 9: Теневые Архетипы</summary><div class="details-content"><p>Демонтаж сценария провала.</p><p><b>Цена: 7 000 ₽</b></p><a href="https://docs.google.com/forms/d/e/1FAIpQLSeqxlsngQO7RLIvUvvioL8JQ2svBZjeFinz49A8cbRSCTj99w/viewform" class="btn" style="font-size: 0.7rem;">Забронировать</a></div></details>
-        <details><summary>Сессия 10: Архитектура психики</summary><div class="details-content"><p>Инициация в позицию Мастера.</p><p><b>Цена: 7 000 ₽</b></p><a href="https://docs.google.com/forms/d/e/1FAIpQLSeqxlsngQO7RLIvUvvioL8JQ2svBZjeFinz49A8cbRSCTj99w/viewform" class="btn" style="font-size: 0.7rem;">Забронировать</a></div></details>
-        <details><summary>Сессия 11: Предназначение</summary><div class="details-content"><p>Стратегия прорыва.</p><p><b>Цена: 7 000 ₽</b></p><a href="https://docs.google.com/forms/d/e/1FAIpQLSeqxlsngQO7RLIvUvvioL8JQ2svBZjeFinz49A8cbRSCTj99w/viewform" class="btn" style="font-size: 0.7rem;">Забронировать</a></div></details>
-        <details><summary>Сессия 12: Квантовое масштабирование</summary><div class="details-content"><p>Неуязвимость к хейту.</p><p><b>Цена: 7 000 ₽</b></p><a href="https://docs.google.com/forms/d/e/1FAIpQLSeqxlsngQO7RLIvUvvioL8JQ2svBZjeFinz49A8cbRSCTj99w/viewform" class="btn" style="font-size: 0.7rem;">Забронировать</a></div></details>
-        <details><summary>Сессия 13: Инициация в успех</summary><div class="details-content"><p>Финальная сборка реальности.</p><p><b>Цена: 7 000 ₽</b></p><a href="https://docs.google.com/forms/d/e/1FAIpQLSeqxlsngQO7RLIvUvvioL8JQ2svBZjeFinz49A8cbRSCTj99w/viewform" class="btn" style="font-size: 0.7rem;">Забронировать</a></div></details>
-    </section>
-
-    <footer class="container" style="padding: 40px 0; color: #333; font-size: 0.8rem; text-align: center;">
-        &copy; 2026 Лана. Истина выше согласия.
+    <footer class="container" style="padding: 60px 0; border-top: 1px solid #111; color: #444; font-size: 0.8rem; text-align: center; margin-top: 40px;">
+        <p style="text-transform: uppercase; letter-spacing: 2px;">&copy; 2026 Лана. Истина выше согласия.</p>
+        <a href="https://wa.me/5521997903431?text=Лана,%20я%20хочу%20на%20консультацию" style="color: #666; text-decoration: none;">WhatsApp: +55 21 99790-3431</a>
     </footer>
 
 </body>
